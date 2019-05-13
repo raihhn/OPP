@@ -1,0 +1,56 @@
+class Kendaraan{
+	public void roda(){
+		System.out.println("Setiap Kendaraan Mempunyai roda");
+	}
+	public void bahanbakar(){
+		System.out.println("Setiap Kendaraan menggunakan bahan bakar");
+	}
+}
+class mobil extends Kendaraan{
+	@Override
+	public void roda(){
+		System.out.println("Mobil Mempunyai 4 roda");
+	}
+	}
+class truck extends Kendaraan{
+	@Override
+	public void bahanbakar(){
+	System.out.println("Bahan bakar truck adalah solar");	
+	}
+	@Override
+		public void roda(){
+		System.out.println("Truck Mempunyai roda yang besar");
+	}
+}
+class pesawat extends Kendaraan{
+	public void terbang(){
+		System.out.println("Pesawat bisa terbang");
+	}
+	@Override
+	public void bahanbakar(){
+		System.out.println("Bahan bakar pesawat adalah avtur");
+	}
+}	
+public class Overriding{
+	public static void main(String[] args) {
+		 // TODO Auto-generated method stub 
+	Kendaraan k = new Kendaraan();
+	mobil m = new mobil();
+	truck t = new truck();
+	pesawat p = new pesawat();
+	Kendaraan km = new mobil();
+	Kendaraan kt = new truck();
+	Kendaraan kp = new pesawat();
+	//mobil
+	k.roda();
+	km.roda();
+	//truck
+	k.bahanbakar();
+	kt.bahanbakar();
+	kt.roda();
+	k.roda();
+	//pesawat
+	k.bahanbakar();
+	kp.bahanbakar();
+	} 
+} 
